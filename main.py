@@ -58,7 +58,7 @@ class SpiderMain(object):
 	# 把解析出来的数据保存到Mysql中
 	def output(self,data):
 		datas = [data['h'],data['time'],data['place'],data['text']]
-		conn = mysql.connector.connect(user='root', password='1994323..cx', database='mydb1')
+		conn = mysql.connector.connect(user='root', password='123', database='mydb1')
 		cursor = conn.cursor()
 		# cursor.execute('create table test (h varchar(25),time varchar(20),place varchar(20), text varchar(500))')
 		cursor.execute('insert into test values (%s,%s,%s,%s)', datas)
