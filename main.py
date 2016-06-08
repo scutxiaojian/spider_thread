@@ -88,7 +88,6 @@ if __name__=="__main__":
 		for t in threadList:
 			t.join()
 		i = i + 7
-		time.sleep(1)
 
 	threadList = [MyThread(new_url,obj_spider) for new_url in new_urls[42:50]]
 	# 启动线程
